@@ -1,0 +1,123 @@
+@define-color rosewater rgba(220, 138, 120, 0.8);
+@define-color flamingo #eebebe;
+@define-color pink #f4b8e4;
+@define-color mauve rgba(136, 57, 239, 0.6);
+@define-color red rgba(210, 15, 57, 0.6);
+@define-color maroon rgba(230, 69, 83, 0.7);
+@define-color peach rgba(254, 100, 11, 0.7);
+@define-color yellow rgba(223, 142, 29, 0.7);
+@define-color green #a6d189;
+@define-color teal #81c8be;
+@define-color sky #99d1db;
+@define-color sapphire rgba(32, 159, 181, 0.7);
+@define-color blue #8caaee;
+@define-color lavender rgba(114, 135, 253, 0.6);
+@define-color text #c6d0f5;
+@define-color subtext1 #b5bfe2;
+@define-color subtext0 #a5adce;
+@define-color overlay2 #949cbb;
+@define-color overlay1 rgba(140, 143, 161, 0.7);
+@define-color overlay0 #737994;
+@define-color surface2 #626880;
+@define-color surface1 #51576d;
+@define-color surface0 #ccd0da;
+@define-color base #303446;
+@define-color mantle rgba(41, 44, 60, 0.9);
+@define-color crust rgba(35, 38, 52, 0.8);
+@define-color black rgba(8, 8, 8, 0.6);
+
+
+* {
+    color: #acb0be;
+    border: none;
+    font-size: 13px;
+    font-family: "FiraCode Nerd Font", "Noto Sans", "Liberation Sans";
+}
+
+window#waybar {
+    /*background-color: @black;*/
+    background-color: rgba(25, 29, 39, 0.7);
+    color: #acb0be;
+    transition-property: background-color;
+    transition-duration: .5s;
+    border-radius: 20px;
+}
+
+window#waybar.hidden {
+    opacity: 0.2;
+}
+
+.modules-left, .modules-center, .modules-right  {
+    margin: 5px 0 0 0;
+}
+
+.modules-right {
+    margin-right: 10px;
+}
+
+.modules-left {
+    margin-left: 10px;
+}
+
+#workspaces button {
+    margin: 4px 2px 4px 6px;
+    /*margin-bottom: 3px;*/
+    padding: 0 5px 0 3px;
+}
+
+#workspaces button:hover {
+    box-shadow: inherit;
+    background: @lavender;
+}
+
+#workspaces button.focused {
+    background: @mauve;
+}
+
+#workspaces button.urgent {
+    background-color: @red;
+}
+
+#scratchpad, #mode, #clock{
+    color: @surface0;
+    margin: 0 0 0 0;
+    padding: 0 10px;
+}
+
+#wireplumber {
+    color: @surface0;
+    margin: 4px 7px 4px 10px;
+    padding: 0 3px;
+}
+
+#wireplumber.muted{
+    background-color: @maroon;
+    color: @surface0;
+    margin: 4px 7px 4px 10px;
+    padding: 1px 10px 1px 8px;
+    border-radius: 5px;
+}
+
+#cpu, #temperature, #memory, #disk {
+    color: @surface0;
+    margin: 4px 2px;
+    padding: 1px 5px;
+    border-radius: 5px;
+}
+
+#cpu {
+    background-color: @sapphire;
+}
+
+#disk {
+    background-color: @peach;
+    margin-left: 13px;
+}
+
+#temperature {
+    background-color: @rosewater;
+}
+
+#memory {
+  background-color: @yellow;
+}

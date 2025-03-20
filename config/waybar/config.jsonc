@@ -1,0 +1,40 @@
+// -*- mode: jsonc -*-
+
+{
+    //"height": 40,
+    "name": "bottom_bar",
+    "layer": "top",
+    "position": "top",
+    "margin-top": 7,
+    "margin-right": 8,
+    "margin-left": 8,
+    "mode": "dock",
+    "fixed-center": true,
+    "exclusive": true,
+    "spacing": 2,
+    "passthrough": false,
+    "reload_style_on_change": true,
+    "output": ["HDMI-A-3"],
+    "include": ["$HOME/.config/waybar/modules.jsonc"],
+   // "include": ["$HOME/.config/waybar/theme/style.css"],  
+
+    "modules-left": [
+        "sway/workspaces",
+        "sway/scratchpad", 
+        "sway/mode"
+    ],
+
+    "modules-center": [
+    "clock"
+  ],
+
+    "modules-right": [
+        "disk", 
+        "temperature", 
+        "memory", 
+        "cpu",
+        "wireplumber"
+
+  ]
+
+}

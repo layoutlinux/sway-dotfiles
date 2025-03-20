@@ -1,0 +1,4 @@
+### Floating Windows ###
+for_window [app_id="thunar"] floating enable, resize set 700 430
+for_window [app_id="org.pulseaudio.pavucontrol"] floating enable, resize set 700 450
+for_window [app_id="org.gnome.FileRoller"] floating enable, resize set 750 500

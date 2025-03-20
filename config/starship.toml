@@ -1,0 +1,55 @@
+# Get editor completions based on the config schema
+"$schema" = 'https://starship.rs/config-schema.json'
+
+format = """
+[░▒▓](#7287fd)\
+$os\
+$username\
+[░▒▓](bg:#8839ef fg:#7287fd)\
+$directory\
+[░▒▓](fg:#8839ef bg:#209fb5)\
+$git_branch\
+$git_status\
+[░▒▓](fg:#209fb5 bg:#33658A)\
+$time\
+[ ](fg:#33658A)\
+"""
+
+add_newline = true
+
+[username]
+show_always = true
+style_user = "bg:#7287fd"
+format = '[$user ]($style)'
+disabled = false
+
+[os]
+style = "bg:#7287fd"
+format = '[ 󰣇 ]($style)'
+disabled = false # Disabled by default
+
+[directory]
+style = "bg:#8839ef"
+format = "[ $path ]($style)"
+truncation_length = 4
+
+[directory.substitutions]
+"Documentos" = " 󰈙 "
+"Descargas" = "  "
+"Música" = "  "
+"Imágenes" = "  "
+
+[git_branch]
+symbol = ""
+style = "bg:#209fb5"
+format = '[ $symbol $branch ]($style)'
+
+[git_status]
+style = "bg:#209fb5"
+format = '[$all_status$ahead_behind ]($style)'
+
+[time]
+disabled = false
+time_format = "%R" # Hour:Minute Format
+style = "bg:#33658A"
+format = '[ ♥ $time ]($style)'
